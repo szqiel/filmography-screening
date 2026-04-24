@@ -1,2 +1,2 @@
 # filmography-screening
-learning html and css with vibe coding :)
+learning html and css with a little vibe coding :)
