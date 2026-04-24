@@ -1,0 +1,104 @@
+/* 1. RESET CSS: Buang jarak bawaan browser yang suka bikin berantakan */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. BODY: Ngatur background utama dan font */
+body {
+    font-family: 'Montserrat', sans-serif; /* Ganti font kaku bawaan */
+    background-color: #462C7D; /* Warna background gelap */
+    color: #ffffff; /* Warna teks putih */
+    padding: 30px; /* Ngasih jarak dari ujung layar */
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase; /* Bikin judul jadi kapital semua */
+    letter-spacing: 3px; /* Bikin jarak antar huruf lebih lebar, biar lebih keren bae*/
+    margin-bottom: 40px; /* Jarak antara judul ke konten */
+    font-weight: 800; /* Bikin judul lebih tebal */
+}
+
+/* KARDUS GEDE: Ngatur layout biar ngejejer ke samping */
+.movie-container {
+    display: flex; /* Ini mantra utamanya */
+    gap: 20px; /* Ngasih jarak antar kartu, jadi lu ga usah repot ngatur margin kiri-kanan manual */
+    flex-wrap: wrap; /* Kalau layarnya kekecilan (misal di HP), card-nya otomatis turun ke baris bawah */
+}
+
+/* 3. KARTU FILM: Ngatur kotak/wadah tempat film lu berada */
+.movie-card {
+    background-color: #831C91; /* Agak lebih terang dari background utama */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px; /* Bikin ujung kotaknya tumpul */
+    width: 300px; /* Bikin lebarnya ga menuhin layar */
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.movie-card h2 {
+    white-space: nowrap; /* Maksa teks ga boleh turun ke baris baru (enter) */
+    overflow: hidden;    /* Nyembunyiin sisa teks yang luber ngelewatin batas kardus */
+    text-overflow: ellipsis; /* Ngasih efek titik-titik (...) di bagian yang kepotong */
+    
+    font-size: 18px; /* Kita set ukuran font-nya biar seragam */
+    margin-bottom: 15px; /* Ngasih jarak dari judul ke poster */
+}
+
+/* 4. GAMBAR: Bikin gambar lu nurut sama ukuran kotaknya */
+.movie-card img {
+    width: 100%; /* Gambarnya ngikutin lebar .movie-card */
+    height: 350px;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 15px; /* Jarak antara gambar ke tombol */
+}
+
+.movie-card h3 {
+    white-space: nowrap; /* Maksa teks ga boleh turun ke baris baru (enter) */
+    overflow: hidden;    /* Nyembunyiin sisa teks yang luber ngelewatin batas kardus */
+    text-overflow: ellipsis; /* Ngasih efek titik-titik (...) di bagian yang kepotong */
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px; /* Kita set ukuran font-nya biar seragam */
+    margin-bottom: 15px; /* Ngasih jarak dari judul ke poster */
+}
+
+/* 5. TOMBOL: Ngubah text link biru cupu jadi tombol beneran */
+.movie-card a {
+    display: inline-block;
+    background-color: #FF70BF;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: auto;
+    
+    /* Tambahin ini biar ga melar: */
+    align-self: center; 
+}
+
+/* Efek pas tombolnya disorot mouse */
+.movie-card a:hover {
+    background-color: #D552A3;
+}
+
+footer a {
+    color: #aaaaaa; /* Abu-abu terang */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff; /* Berubah putih pas disorot mouse */
+}
+
+footer {
+    margin-top: 150px;
+    text-align: center;
+}
